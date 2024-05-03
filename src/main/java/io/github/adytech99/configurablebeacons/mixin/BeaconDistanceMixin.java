@@ -1,7 +1,6 @@
 package io.github.adytech99.configurablebeacons.mixin;
 
 import io.github.adytech99.configurablebeacons.ConfigurableBeacons;
-import io.github.adytech99.configurablebeacons.beacondata.BeaconForceLoader;
 import io.github.adytech99.configurablebeacons.beacondata.BeaconLocationsFileManager;
 import io.github.adytech99.configurablebeacons.config.ConfigurableBeaconsConfig;
 import net.minecraft.block.entity.BeaconBlockEntity;
@@ -9,7 +8,6 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
@@ -76,6 +74,5 @@ public class BeaconDistanceMixin {
 
 		}
 		if(ConfigurableBeaconsConfig.HANDLER.instance().force_load_beacons) BeaconLocationsFileManager.addBlockPosToWorld(world, pos);
-		else BeaconForceLoader.updateBeacon((ServerWorld) world, world.getBlockEntity(pos));
 	}
 }

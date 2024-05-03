@@ -18,9 +18,6 @@
 		"main": [
 			"io.github.adytech99.configurablebeacons.ConfigurableBeacons"
 		],
-		"fabric-datagen": [
-			"io.github.adytech99.configurablebeacons.ConfigurableBeaconsDataGenerator"
-		],
 		"modmenu": ["io.github.adytech99.configurablebeacons.ModMenuAPIImpl"]
 	},
 	"mixins": [
