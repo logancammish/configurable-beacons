@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "configurable-beacons",
+	"version": "${version}",
+	"name": "Configurable Beacons",
+	"description": "Adds a config option to modify the range + effects durations of beacons!",
+	"authors": [
+		"AdyTech99"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/configurable-beacons/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.adytech99.configurablebeacons.ConfigurableBeacons"
+		],
+		"fabric-datagen": [
+			"io.github.adytech99.configurablebeacons.ConfigurableBeaconsDataGenerator"
+		],
+		"modmenu": ["io.github.adytech99.configurablebeacons.ModMenuAPIImpl"]
+	},
+	"mixins": [
+		"configurable-beacons.mixins.json"
+	],
+
+	"accessWidener": "configurable-beacons.accesswidener",
+
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": ">=1.20.5",
+		"java": ">=17",
+		"fabric-api": "*",
+		"yet_another_config_lib_v3": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "io.github.adytech99.configurablebeacons.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BeaconDistanceMixin",
+    "BeaconForceLoaderUpdaterMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

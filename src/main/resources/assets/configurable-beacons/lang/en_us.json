@@ -1,0 +1,31 @@
+{
+  "yacl3.config.configurable-beacons:config.level_one_beacon_radius": "Level one beacon range",
+  "yacl3.config.configurable-beacons:config.level_two_beacon_radius": "Level two beacon range",
+  "yacl3.config.configurable-beacons:config.level_three_beacon_radius": "Level three beacon range",
+  "yacl3.config.configurable-beacons:config.level_four_beacon_radius": "Level four beacon range",
+  "yacl3.config.configurable-beacons:config.force_load_beacons": "Force load beacons",
+
+  "yacl3.config.configurable-beacons:config.level_one_effects_duration": "Level one beacon effect duration",
+  "yacl3.config.configurable-beacons:config.level_two_effects_duration": "Level two beacon effect duration",
+  "yacl3.config.configurable-beacons:config.level_three_effects_duration": "Level three beacon effect duration",
+  "yacl3.config.configurable-beacons:config.level_four_effects_duration": "Level four beacon effect duration",
+
+
+  "yacl3.config.configurable-beacons:config.level_one_beacon_radius.desc": "Modifies the range of the Level One beacon. Visit https://minecraft.wiki/w/Beacon to learn about beacon levels",
+  "yacl3.config.configurable-beacons:config.level_two_beacon_radius.desc": "Modifies the range of the Level Two beacon. Visit https://minecraft.wiki/w/Beacon to learn about beacon levels",
+  "yacl3.config.configurable-beacons:config.level_three_beacon_radius.desc": "Modifies the range of the Level Three beacon. Visit https://minecraft.wiki/w/Beacon to learn about beacon levels",
+  "yacl3.config.configurable-beacons:config.level_four_beacon_radius.desc": "Modifies the range of the Level Four beacon. Visit https://minecraft.wiki/w/Beacon to learn about beacon levels",
+  "yacl3.config.configurable-beacons:config.force_load_beacons.desc": "Setting this to true allows beacons to give their effect even if they are outside the rendering distance. Note: Only the beacon will be forceloaded, not the entire chunk",
+
+  "yacl3.config.configurable-beacons:config.level_one_effects_duration.desc": "Modifies the duration of the status effect of the Level One beacon. Here, values are in game ticks, not seconds.",
+  "yacl3.config.configurable-beacons:config.level_two_effects_duration.desc": "Modifies the duration of the status effect of the Level Two beacon. Here, values are in game ticks, not seconds.",
+  "yacl3.config.configurable-beacons:config.level_three_effects_duration.desc": "Modifies the duration of the status effect of the Level Three beacon. Here, values are in game ticks, not seconds.",
+  "yacl3.config.configurable-beacons:config.level_four_effects_duration.desc": "Modifies the duration of the status effect of the Level Four beacon. Here, values are in game ticks, not seconds.",
+
+
+  "yacl3.config.configurable-beacons:config.category.beacon_radius": "Beacon Range",
+  "yacl3.config.configurable-beacons:config.category.beacon_duration": "Beacon Effects Duration",
+
+
+  "yacl3.config.configurable_beacons:config.category.beacon-radius.group.beacon-radius": "Beacon Radius"
+}
