@@ -21,7 +21,7 @@ public class ConfigurableBeaconsConfig {
     public static final Path CONFIG_PATH = FabricLoader.getInstance().getConfigDir().resolve("ConfigurableBeaconsConfig.json");
 
     public static final ConfigClassHandler<ConfigurableBeaconsConfig> HANDLER = ConfigClassHandler.createBuilder(ConfigurableBeaconsConfig.class)
-            .id(new Identifier("configurable-beacons", "config"))
+            .id(Identifier.of("configurable-beacons", "config"))
             .serializer(config -> GsonConfigSerializerBuilder.create(config)
                     .setPath(CONFIG_PATH)
                     .build())

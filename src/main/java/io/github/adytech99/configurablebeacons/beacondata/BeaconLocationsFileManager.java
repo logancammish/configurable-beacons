@@ -98,7 +98,7 @@ public class BeaconLocationsFileManager {
     }
 
     private static GlobalPos readGlobalPos(DataInputStream inputStream) throws IOException {
-        RegistryKey<World> dimension = RegistryKey.of(RegistryKeys.WORLD, new Identifier(inputStream.readUTF()));
+        RegistryKey<World> dimension = RegistryKey.of(RegistryKeys.WORLD, Identifier.tryParse(inputStream.readUTF()));
         int x = inputStream.readInt();
         int y = inputStream.readInt();
         int z = inputStream.readInt();
