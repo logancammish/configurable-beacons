@@ -1,10 +1,10 @@
 # Configurable Beacons 3.1.0
 
-Configurable Beacons 3.1.0 is a fork of the original [AdyTech99 project](https://github.com/AdyTech99/configurable-beacons), updated for the Minecraft 1.26.0–1.26.2 Fabric series.
+Configurable Beacons 3.1.0 is a fork of the original [AdyTech99 project](https://github.com/AdyTech99/configurable-beacons), updated for the Minecraft 26.0–26.2 Fabric series.
 
 ## Highlights
 
-- Added Minecraft 1.26.0–1.26.2 compatibility metadata and handling for the newer command-permission API.
+- Added Minecraft 26.0–26.2 compatibility metadata and handling for the newer command-permission API.
 - Made the Mod Menu title unambiguous: it now identifies singleplayer integrated-server settings separately from multiplayer local settings.
 - Added server owner/operator commands to change beacon ranges, effect durations, and force-loading immediately:
   - `/configurablebeacons set radius <level> <blocks>`
@@ -16,7 +16,7 @@ Configurable Beacons 3.1.0 is a fork of the original [AdyTech99 project](https:/
 
 ## Requirements
 
-- Minecraft 1.26.0–1.26.2
+- Minecraft 26.0–26.2
 - Fabric Loader 0.19.3+
 - Java 25+
 - Fabric API and YetAnotherConfigLib v3 (YACL)

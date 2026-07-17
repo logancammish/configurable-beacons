@@ -8,7 +8,7 @@ This project is a fork of the original [Configurable Beacons by AdyTech99](https
 
 | Component | Requirement |
 | --- | --- |
-| Minecraft | 1.26.0 through 1.26.2 |
+| Minecraft | 26.0 through 26.2 |
 | Mod loader | Fabric Loader 0.19.3 or newer |
 | Java | Java 25 or newer |
 | Environment | Client, singleplayer, or dedicated Fabric server |
