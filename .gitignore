@@ -31,9 +31,19 @@ bin/
 # fabric
 
 run/
+logs/
+crash-reports/
+config/
+world/
+servers.dat
+
+# Local server and mod configuration
+ConfigurableBeaconsConfig.json
+ConfigurableBeacons_beacon_locations.txt
 
 # java
 
+*.log
 hs_err_*.log
 replay_*.log
 *.hprof

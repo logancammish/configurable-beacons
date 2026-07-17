@@ -1,21 +1,21 @@
 package io.github.adytech99.configurablebeacons.beacondata;
 
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
 import java.io.Serializable;
 
 public class WorldBlockData implements Serializable {
     private static final long serialVersionUID = 1L;
-    private World world;
+    private Level world;
     private BlockPos blockPos;
 
-    public WorldBlockData(World world, BlockPos blockPos) {
+    public WorldBlockData(Level world, BlockPos blockPos) {
         this.world = world;
         this.blockPos = blockPos;
     }
 
     // Getter methods
-    public World getWorld() {
+    public Level getWorld() {
         return world;
     }
 

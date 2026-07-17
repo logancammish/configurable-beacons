@@ -3,14 +3,14 @@ package io.github.adytech99.configurablebeacons.mixin;
 import io.github.adytech99.configurablebeacons.ConfigurableBeacons;
 import io.github.adytech99.configurablebeacons.beacondata.BeaconLocationsFileManager;
 import io.github.adytech99.configurablebeacons.config.ConfigurableBeaconsConfig;
-import net.minecraft.block.entity.BeaconBlockEntity;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BeaconBlockEntity;
+import net.minecraft.world.phys.AABB;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -43,32 +43,32 @@ public class BeaconDistanceMixin {
 		return (9 + beaconLevel * 2) * 20;
 	}
 
-	@Inject(at = @At("HEAD"), method = "applyPlayerEffects", cancellable = true)
-	private static void applyPlayerEffects(World world, BlockPos pos, int beaconLevel, @Nullable RegistryEntry<StatusEffect> primaryEffect, @Nullable RegistryEntry<StatusEffect> secondaryEffect, CallbackInfo ci){
+	@Inject(at = @At("HEAD"), method = "applyEffects", cancellable = true)
+	private static void applyEffects(Level world, BlockPos pos, int beaconLevel, @Nullable Holder<MobEffect> primaryEffect, @Nullable Holder<MobEffect> secondaryEffect, CallbackInfo ci){
 		ci.cancel();
-		if (!world.isClient && primaryEffect != null) {
+		if (!world.isClientSide() && primaryEffect != null) {
 			double d = getRadius(beaconLevel);
 			int i = 0;
 			if (beaconLevel >= 4 && Objects.equals(primaryEffect, secondaryEffect)) {
 				i = 1;
 			}
 			int j = getEffectsDuration(beaconLevel);
-			Box box = (new Box(pos)).expand(d).stretch(0.0, (double)world.getHeight(), 0.0);
-			List<PlayerEntity> list = world.getNonSpectatingEntities(PlayerEntity.class, box);
+			AABB box = (new AABB(pos)).inflate(d).expandTowards(0.0, world.getHeight(), 0.0);
+			List<Player> list = world.getEntitiesOfClass(Player.class, box, player -> !player.isSpectator());
 			Iterator var11 = list.iterator();
 
-			PlayerEntity playerEntity;
+			Player playerEntity;
 			while(var11.hasNext()) {
-				playerEntity = (PlayerEntity)var11.next();
-				playerEntity.addStatusEffect(new StatusEffectInstance(primaryEffect, j, i, true, true));
+				playerEntity = (Player)var11.next();
+				playerEntity.addEffect(new MobEffectInstance(primaryEffect, j, i, true, true));
 			}
 
 			if (beaconLevel >= 4 && !Objects.equals(primaryEffect, secondaryEffect) && secondaryEffect != null) {
 				var11 = list.iterator();
 
 				while(var11.hasNext()) {
-					playerEntity = (PlayerEntity)var11.next();
-					playerEntity.addStatusEffect(new StatusEffectInstance(secondaryEffect, j, 0, true, true));
+					playerEntity = (Player)var11.next();
+				playerEntity.addEffect(new MobEffectInstance(secondaryEffect, j, 0, true, true));
 				}
 			}
 

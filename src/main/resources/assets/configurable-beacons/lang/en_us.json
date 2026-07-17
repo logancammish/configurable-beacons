@@ -1,4 +1,6 @@
 {
+  "configurable-beacons.config.title.singleplayer": "Configurable Beacons — Singleplayer server settings",
+  "configurable-beacons.config.title.multiplayer": "Configurable Beacons — Local settings (server settings are controlled by an operator)",
   "yacl3.config.configurable-beacons:config.level_one_beacon_radius": "Level one beacon range",
   "yacl3.config.configurable-beacons:config.level_two_beacon_radius": "Level two beacon range",
   "yacl3.config.configurable-beacons:config.level_three_beacon_radius": "Level three beacon range",

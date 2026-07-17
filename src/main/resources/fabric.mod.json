@@ -3,13 +3,13 @@
 	"id": "configurable-beacons",
 	"version": "${version}",
 	"name": "Configurable Beacons",
-	"description": "Adds a config option to modify the range + effects durations of beacons!",
+	"description": "Configurable beacon ranges and effect durations for servers and singleplayer worlds.",
 	"authors": [
 		"AdyTech99"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/logancammish/configurable-beacons",
+		"sources": "https://github.com/logancammish/configurable-beacons"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/configurable-beacons/icon.png",
@@ -27,13 +27,13 @@
 	"accessWidener": "configurable-beacons.accesswidener",
 
 	"depends": {
-		"fabricloader": ">=0.16.14",
-		"minecraft": ">=1.21.5",
-		"java": ">=21",
+		"fabricloader": ">=0.19.3",
+		"minecraft": ">=1.26.0 <1.27.0",
+		"java": ">=25",
 		"fabric-api": "*",
 		"yet_another_config_lib_v3": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"modmenu": "*"
 	}
 }
