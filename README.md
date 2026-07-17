@@ -1,3 +1,5 @@
+## Okay, just get to the point, where is it?
+**-> You can find the jar file for 26.0-26.2 [here](https://github.com/logancammish/configurable-beacons/releases/download/3.1.0/configurable-beacons-3.1.0.jar), or under releases <-**
 # Configurable Beacons
 
 Configurable Beacons is a Fabric mod that lets a server or singleplayer world customise each beacon level's effect range and duration. It can also keep registered beacons active outside normal player range.
@@ -98,4 +100,4 @@ See [RELEASE_NOTES.md](RELEASE_NOTES.md) for the 3.1.0 release summary.
 
 ## License
 
-This project is licensed under [CC0-1.0](LICENSE).
+This project is licensed under [GNU GPLv3](LICENSE).
